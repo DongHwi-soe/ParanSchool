@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/*
+	전체를 감싸는 부분 시작
+*/
+html, body, .wrapper {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #4d4d4d;
+}
+/*
+	전체를 감싸는 부분 끝
+*/
+/*
+	header 부분 시작
+*/
+.header {
+	width: 100%;
+	background: black;
+}
+
+.header ul {
+	margin: 0;
+	list-style: none;
+	padding-left: 0;
+	display: flex;
+}
+
+.header ul li {
+	display: inline-block;
+	color: white;
+	flex: 1;
+	text-align: center;
+}
+
+.header ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+.header ul li a:hover {
+	color: #00ccff;
+	font-size: 30px;
+}
+
+.header ul li .pick {
+	color: #00ccff;
+	font-size: 30px;
+}
+/*
+	header 부분 끝
+*/
+/*
+	middle 부분 시작
+*/
+.middle {
+	width: 100%;
+}
+
+.board {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.board h1 {
+	font-size: 50px;
+	color: white;
+}
+
+.board form {
+	font-size: 40px;
+	color: white;
+	font-weight: bold;
+}
+
+.board input {
+	text-align: center;
+}
+
+.board input[type='text'] {
+	border-radius: 10px;
+	border: none;
+	width: 500px;
+	height: 60px;
+	font-size: 30px;
+}
+
+.board .age {
+	border-radius: 10px;
+	border: none;
+	width: 50px;
+	height: 40px;
+	font-size: 30px;
+}
+
+.board input[type='password'] {
+	border-radius: 10px;
+	border: none;
+	width: 500px;
+	height: 60px;
+	font-size: 30px;
+}
+
+.board input[type='radio'] {
+	border: none;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+}
+
+.board input[type='email'] {
+	border-radius: 10px;
+	border: none;
+	width: 500px;
+	height: 60px;
+	font-size: 30px;
+}
+
+.middle input[type='button'] {
+	border-radius: 30px 0 30px 0;
+	background-color: #ff6666;
+	border: none;
+	color: white;
+	padding: 20px 40px;
+	font-size: 20px;
+	text-align: center;
+	margin: 4px;
+}
+
+.middle input[type='submit'] {
+	border-radius: 30px 0 30px 0;
+	background-color: #ff6666;
+	border: none;
+	color: white;
+	padding: 20px 40px;
+	font-size: 20px;
+	text-align: center;
+	margin: 4px;
+}
+
+.middle input[type='reset'] {
+	border-radius: 30px 0 30px 0;
+	background-color: #ff6666;
+	border: none;
+	color: white;
+	padding: 20px 40px;
+	font-size: 20px;
+	text-align: center;
+	margin: 4px;
+}
+
+.middle input[type='button']:hover {
+	border-radius: 30px 30px 30px 30px;
+	background-color: #ff6666;
+}
+
+.middle input[type='submit']:hover {
+	border-radius: 30px 30px 30px 30px;
+	background-color: #ff6666;
+}
+
+.middle input[type='reset']:hover {
+	border-radius: 30px 30px 30px 30px;
+	background-color: #ff6666;
+}
+/*
+	middle 부분 끝
+*/
+
+/*
+	footer 부분 시작
+*/
+.footer {
+	width: 100%;
+	position: fixed;
+	background-color: black;
+	bottom: 0;
+}
+
+.footer a {
+	text-decoration: none;
+	color: white;
+}
+
+.footer a:hover {
+	color: #00ccff;
+}
+
+.footer ul {
+	margin: 0;
+	list-style: none;
+	padding-left: 0;
+	display: flex;
+}
+
+.footer ul li {
+	display: inline-block;
+	color: white;
+	flex: 1;
+	text-align: center;
+}
+/*
+	footer 부분 끝
+*/

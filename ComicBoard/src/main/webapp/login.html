@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>login.html 파일</title>
+	<link href="/login_html.css" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<ul>
+				<li class="brand"><h1>ComicBoard</h1></li>
+				<li class="menu"><h2><a href="/">Home</a></h2></li>
+				<li class="menu"><h2><a href="./books.html">HTML 게시판</a></h2></li>
+				<li class="menu"><h2><a href="./books">JSP 게시판</a></h2></li>
+				<li class="user"><h2><a class="pick" href="./login.html">Login</a></h2></li>
+				<li class="user"><h2><a href="./join.html">Join</a></h2></li>
+			</ul>
+		</div>
+		<div class="middle">
+			<div class="board">
+				<h1>로그인 화면</h1>
+				<form name="User" action="#" method="post">
+					<input type="text" name="user_ID" size="20" placeholder="아이디를 입력해주세요."><br>
+					<input type="password" name="user_PW" size="20" placeholder="비밀번호를 입력해주세요."><br>
+					<input type="button" value="회원가입화면" onClick="location.href='./join.html'">
+					<input type="submit" value="로그인하기">
+					<input type="reset" value="다시 입력">
+				</form>
+			</div>
+		</div>
+		<div class="footer">
+			<ul>
+				<li><h1><a href="https://cafe.naver.com/paranhrdschool">PARAN</a></h1></li>
+				<li><h1>ComicBoard</h1></li>
+				<li><h1>Phone : (061) 746-7000</h1></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>books.html 파일</title>
+	<link href="/books_html.css" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<ul>
+				<li class="brand"><h1>ComicBoard</h1></li>
+				<li class="menu"><h2><a href="/">Home</a></h2></li>
+				<li class="menu"><h2><a class="pick" href="./books.html">HTML 게시판</a></h2></li>
+				<li class="menu"><h2><a href="./books">JSP 게시판</a></h2></li>
+				<li class="user"><h2><a href="./login.html">Login</a></h2></li>
+				<li class="user"><h2><a href="./join.html">Join</a></h2></li>
+			</ul>
+		</div>
+		<div class="middle">
+			<div class="board">
+				<h1>HTML Books Page</h1>
+				<table id="bookTable">
+					<tr>
+						<th>만화 ID</th>
+						<th>만화 장르</th>
+						<th>만화 제목</th>
+						<th>만화 소개</th>
+						<th>만화 작가</th>
+						<th>만화 조회수</th>
+						<th>삭제유무</th>
+						<th>올린 사람</th>
+						<th>올린 날짜</th>
+						<th>수정한 사람</th>
+						<th>수정한 날짜</th>
+					</tr>
+				</table>
+				<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+				<script type="text/javascript">
+				$.ajax({
+					type:"GET",
+					url:"http://localhost:8080/api/books",
+					success:function(data){
+						console.log(data);
+						var tdTag;
+						for(var i=0;i<data.length;i++){
+							tdTag="<tr><td>"+data[i].board_ID+"</td>"
+								+"<td>"+data[i].board_Genre+"</td>"
+								+"<td>"+data[i].board_Title+"</td>"
+								+"<td>"+data[i].board_Intro+"</td>"
+								+"<td>"+data[i].board_Writer+"</td>"
+								+"<td>"+data[i].board_CNT+"</td>"
+								+"<td>"+data[i].board_YN+"</td>"
+								+"<td>"+data[i].board_InsertUserID+"</td>"
+								+"<td>"+data[i].board_InsertDate+"</td>"
+								+"<td>"+data[i].board_UploadUserID+"</td>"
+								+"<td>"+data[i].board_UploadDate+"</td></tr>";
+							$("#bookTable").append(tdTag);
+						}
+					}
+				});
+				</script>
+			</div>
+		</div>
+		<div class="footer">
+			<ul>
+				<li><h1><a href="https://cafe.naver.com/paranhrdschool">PARAN</a></h1></li>
+				<li><h1>ComicBoard</h1></li>
+				<li><h1>Phone : (061) 746-7000</h1></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
